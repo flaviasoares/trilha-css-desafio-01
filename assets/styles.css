@@ -16,7 +16,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 56px 0 75px;
+    padding: 56px 16px 75px;
     gap: 16px;
 }
 
@@ -35,6 +35,7 @@ body {
     font-style: normal;
     font-weight: 900;
     line-height: normal;
+    text-align: center;
     background: linear-gradient(180deg, #33A8DB 0%, #1472B7 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -83,13 +84,14 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 118px 0 90px;
+    padding: 118px 16px 90px;
     gap: 24px;
 }
 
 #course-content h2 {
     color: #33A8DB;
     font-size: 32px;
+    text-align: center;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -125,6 +127,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    align-self: stretch;
+    text-align: center;
     width: 535px;
     padding: 16px;
     border-radius: 57px;
@@ -135,15 +139,18 @@ main {
 
 .module span {
     padding-right: 4px;
+    text-align: center;
     color: #33A8DB;
 }
 
 #transform-world {
-    border: 1px solid #33A8DB;
+    border-top: 1px solid #33A8DB;
+    border-bottom: 1px solid #33A8DB;
     background-image: url('./images/woman-code.png');
     background-size: cover;
     background-size: no-repeat;
     background-attachment: fixed;
+    background-position: center center;
 }
 
 #transform-world p {
@@ -165,6 +172,7 @@ main {
     flex-direction: column;
     align-items: center;
     align-content: center;
+    padding: 0 16px;
 }
 
 #professional-challenges h2 {
@@ -200,6 +208,7 @@ footer {
     align-content: center;
     border-top: 1px solid #33A8DB;
     background: linear-gradient(180deg, #33A8DB00, #33A8DB20, #33A8DB20);
+    padding: 0 16px;
 }
 
 footer img {
@@ -221,4 +230,24 @@ footer p a {
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+    .module {
+        width: auto;
+    }
+
+    #transform-world p {
+        margin: 111px 32px;
+        font-size: 28px;
+        width: 180px;
+    }
+
+    #professional-challenges img {
+        width: 100%;
+    }
+
+    footer .dio-logo {
+        width: 80%;
+    }
 }
